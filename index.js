@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
-const port = process.env.port||1060; // for creating heroku dynamic port
 
 // local import
 
+const port = require("./dbURL");
 const noteRouter = require("./routes/note");
 const mongoose = require("./db");
 const Notes = require("./models/note");
